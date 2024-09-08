@@ -6,13 +6,22 @@
 // TODO:  📌 Модифицировать класс Контроллер, добавив в него метод сортирующий
 //          список потоков, путем вызова созданного сервис
 
+
 import java.util.List;
 
 public class Controller {
+
+    private List<StudentStream> studentStreams;
     private  final StudentGroupService studentGroupService = new StudentGroupService();
     private  final StudentStreamService studentStreamService= new StudentStreamService();
 
-     public void  removeStudentByFIO(String firstName, String lastName, String middleName){
+
+
+    public Controller(List<StudentStream> studentStreams) {
+        this.studentStreams = studentStreams;
+    }
+
+    public void  removeStudentByFIO(String firstName, String lastName, String middleName){
          studentGroupService.removeStudentByFIO(firstName,lastName,middleName);
 
     }
@@ -21,8 +30,17 @@ public class Controller {
         return studentGroupService.getSortedStudentByFIO();
     }
 
-    public List<StudentStream> getSortedStream(){
-       return studentStreamService.getSortedStreamList();
+    public List<StudentStream> getSortedStream(List<StudentStream> studentStreams){
+       return studentStreamService.getSortedStreamList(this.studentStreams);
     }
 
-}
+
+
+
+    }
+
+
+
+
+
+

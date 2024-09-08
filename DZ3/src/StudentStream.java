@@ -5,6 +5,7 @@ public class StudentStream implements Iterable<StudentGroup>{
     private List<StudentGroup> studentGroupList;
 
 
+
     public int getSizeOfStream() {
         return studentGroupList.size();
     }
@@ -17,6 +18,8 @@ public class StudentStream implements Iterable<StudentGroup>{
         this.studentGroupList = studentGroupList;
     }
 
+
+    
     @Override
     public Iterator<StudentGroup> iterator() {
         return new StreamIterator(this);
