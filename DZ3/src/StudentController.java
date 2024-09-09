@@ -9,25 +9,33 @@
 
 import java.util.List;
 
-public class Controller {
+public class StudentController implements UserController<Student> {
 
     private List<StudentStream> studentStreams;
     private  final StudentGroupService studentGroupService = new StudentGroupService();
     private  final StudentStreamService studentStreamService= new StudentStreamService();
 
 
+    private final  StudentView studentView = new StudentView();
 
-    public Controller(List<StudentStream> studentStreams) {
+    public StudentController(List<StudentStream> studentStreams) {
         this.studentStreams = studentStreams;
     }
+    public List<Student> getSortedStudentList(){
+        List<Student> studentList= studentGroupService.getSortedStudentList();
+        studentView.sendOnConsole(studentList);
 
+        return studentList;
+    }
     public void  removeStudentByFIO(String firstName, String lastName, String middleName){
          studentGroupService.removeStudentByFIO(firstName,lastName,middleName);
 
     }
 
     public List<Student>getSortedStudentByFIO() {
-        return studentGroupService.getSortedStudentByFIO();
+        List<Student> studentList= studentGroupService.getSortedStudentByFIO();
+        studentView.sendOnConsole(studentList);
+        return studentList;
     }
 
     public List<StudentStream> getSortedStream(List<StudentStream> studentStreams){
@@ -35,9 +43,12 @@ public class Controller {
     }
 
 
-
+    @Override
+    public void create(String firstName, String lastName, String middleName) {
+        studentGroupService.createStudent(firstName, lastName, middleName);
 
     }
+}
 
 
 
