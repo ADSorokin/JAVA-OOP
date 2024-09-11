@@ -1,5 +1,5 @@
 public class Teacher extends User implements Comparable<Teacher>{
-    private Long teacherId;
+    private Long teacherId= Long.valueOf(0);
 
     private String subject;
 
@@ -22,10 +22,22 @@ public class Teacher extends User implements Comparable<Teacher>{
     public Teacher(String firstName, String lastName, String middleName, String subject) {
         super(firstName, lastName, middleName);
         this.subject = subject;
+
     }
 
     @Override
     public int compareTo(Teacher o) {
         return this.teacherId.compareTo(o.teacherId);
+    }
+
+    @Override
+    public String toString() {
+        return " Учитель {" +
+                " Идентификационный номер Id= " + teacherId +
+                " Имя= " + getFirstName() +
+                " Отчество= " + getMiddleName() +
+                " Фамилия= " + getLastName() +
+                ", преподаваемый предмет= '" + subject + '\'' +
+                '}';
     }
 }

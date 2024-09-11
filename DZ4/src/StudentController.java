@@ -47,15 +47,6 @@ public class StudentController implements UserController<Student> {
     public void create(String firstName, String lastName, String middleName) {
         studentGroupService.createStudent(firstName, lastName, middleName);
 
-    }
-
-    @Override
-    public void show(String firstName, String lastName, String middleName) {
-
-    }
-
-    @Override
-    public void edit(String firstName, String lastName, String middleName) {
 
     }
 }

@@ -10,4 +10,11 @@ public class StudentView implements UserView<Student>{
         }
 
     }
+
+    @Override
+    public Student getTeacherDetailsFromUser() {
+        return null;
+    }
+
+
 }
