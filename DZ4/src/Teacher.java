@@ -1,8 +1,12 @@
+import java.util.concurrent.atomic.AtomicLong;
+
 public class Teacher extends User implements Comparable<Teacher>{
-    private Long teacherId= Long.valueOf(0);
+
+    private Long teacherId;
 
     private String subject;
-
+    AtomicLong counter = new AtomicLong();
+    long numericID = counter.getAndIncrement();
     public Long getTeacherId() {
         return teacherId;
     }
@@ -22,8 +26,12 @@ public class Teacher extends User implements Comparable<Teacher>{
     public Teacher(String firstName, String lastName, String middleName, String subject) {
         super(firstName, lastName, middleName);
         this.subject = subject;
+        setTeacherId(numericID);
+
 
     }
+
+
 
     @Override
     public int compareTo(Teacher o) {

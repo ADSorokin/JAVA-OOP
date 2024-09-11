@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class TeacherService {
+public class TeacherService implements UserService<Teacher> {
 
 
 
@@ -12,25 +12,35 @@ public class TeacherService {
         teacherList = new ArrayList<>();
     }
 
-    public void addTeacher(Teacher teacher) {
-        teacherList.add(teacher);
-    }
 
-    public void updateTeacher(int index, Teacher newTeacher) {
+
+
+
+
+    public void updateItem(int index, Teacher teacher) {
 
         if (index >= 0 && index < teacherList.size()) {
-            teacherList.set(index, newTeacher);
+            teacherList.set(index, teacher);
         }
         else System.out.println("Элемент не возможно обновить");
     }
 
-    public void deleteTeacher(int index) {
+
+    @Override
+    public void addItem(Teacher teacher) {
+        teacherList.add(teacher);
+    }
+
+    public void deleteItem(int index) {
         if (index >= 0 && index < teacherList.size()) {
             teacherList.remove(index);
         }
+        else System.out.println("Элемент не возможно удалить ");
     }
 
-    public List<Teacher> getAllTeachers() {
+    public List<Teacher> getAllItem() {
         return new ArrayList<>(teacherList);
     }
+
+
 }

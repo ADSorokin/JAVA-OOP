@@ -1,9 +1,13 @@
-import java.util.ArrayList;
+
 import java.util.List;
 
 public interface UserService <T extends User> {
-//    public List<T> t = new ArrayList<T>();
-//
-//    public List<T> getAll();
 
+public void addItem(T t);
+public void deleteItem(int index);
+
+
+
+    void updateItem(int index, T t);
+public List<T> getAllItem();
 }

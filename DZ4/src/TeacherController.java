@@ -8,19 +8,19 @@ public class TeacherController implements UserController<Teacher>{
         this.service = service;
         this.view = view;
     }
-
-    public void addTeacher() {
+    @Override
+    public void addItem() {
         Teacher teacher = view.getTeacherDetailsFromUser();
-        service.addTeacher(teacher);
+        service.addItem(teacher);
     }
 
-    public void updateTeacher(int index) {
+    public void updateItem(int index) {
         Teacher teacher = view.getTeacherDetailsFromUser();
-        service.updateTeacher(index - 1, teacher);
+        service.updateItem(index - 1, teacher);
     }
 
-    public void displayAllTeachers() {
-        List<Teacher> teachers = service.getAllTeachers();
+    public void displayAll() {
+        List<Teacher> teachers = service.getAllItem();
         view.sendOnConsole(teachers);
     }
 
@@ -31,4 +31,8 @@ public class TeacherController implements UserController<Teacher>{
     public void create(String firstName, String lastName, String middleName) {
 
     }
+
+
+
+
 }

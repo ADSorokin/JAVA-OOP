@@ -4,9 +4,12 @@ public class Main {
         TeacherView view = new TeacherView();
         TeacherController controller = new TeacherController(service, view);
 
-        controller.addTeacher();
-        controller.displayAllTeachers();
-        controller.updateTeacher(1);
-        controller.displayAllTeachers();
+
+        controller.addItem();
+        controller.addItem();
+        controller.addItem();
+        controller.displayAll();
+        controller.updateItem(1);
+        controller.displayAll();
     }
 }
