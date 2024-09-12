@@ -21,10 +21,10 @@ public class Teacher extends User implements Comparable<Teacher>{
         this.subject = subject;
     }
 
-    public Teacher(String firstName, String lastName, String middleName, String subject, Long teacherId) {
+    public Teacher(String firstName, String lastName, String middleName, String subject) {
         super(firstName, lastName, middleName);
         this.subject = subject;
-        this.teacherId=teacherId;
+
 
 
 
@@ -40,7 +40,6 @@ public class Teacher extends User implements Comparable<Teacher>{
     @Override
     public String toString() {
         return " Учитель {" +
-                " Идентификационный номер Id= " + teacherId +
                 " Имя= " + getFirstName() +
                 " Отчество= " + getMiddleName() +
                 " Фамилия= " + getLastName() +

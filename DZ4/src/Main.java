@@ -9,7 +9,7 @@ public class Main {
         controller.addItem();
         controller.addItem();
         controller.displayAll();
-        controller.updateItem(1);
+        controller.updateItem(2);
         controller.displayAll();
     }
 }

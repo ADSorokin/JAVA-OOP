@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TeacherView  implements UserView<Teacher> {
-    long id =0;
+
     Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -21,11 +21,11 @@ public class TeacherView  implements UserView<Teacher> {
         String middleName = scanner.nextLine();
         System.out.print("Enter teacher's subject: ");
         String subject = scanner.nextLine();
-        id++;
 
 
 
-        return new Teacher(firstName,lastName,middleName,subject,id);
+
+        return new Teacher(firstName,lastName,middleName,subject);
 
     }
 }
