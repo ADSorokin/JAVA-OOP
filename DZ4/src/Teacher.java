@@ -21,9 +21,10 @@ public class Teacher extends User implements Comparable<Teacher>{
         this.subject = subject;
     }
 
-    public Teacher(String firstName, String lastName, String middleName, String subject) {
+    public Teacher(String firstName, String lastName, String middleName, String subject, Long teacherId) {
         super(firstName, lastName, middleName);
         this.subject = subject;
+        this.teacherId=teacherId;
 
 
 
