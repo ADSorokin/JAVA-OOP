@@ -5,7 +5,7 @@ import model.ComplexNumber;
 public class View {
 
     public void outOnConsole(String s,ComplexNumber res){
-        System.out.println("Результат: " + s + res);
+        System.out.println("Р РµР·СѓР»СЊС‚Р°С‚: " + s + res);
     }
     }
 
