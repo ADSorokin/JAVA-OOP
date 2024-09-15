@@ -52,6 +52,17 @@ public List<User> getAllUsers(){
         return students;
     }
 
+    public List<User> getAllTeacher(){
+        List<User> teacher =  new ArrayList<>();
+        for (User user : userList){
+            if (user instanceof Teacher){
+                teacher.add(user);
+            }
+        }
+        return teacher;
+    }
+
+
     private int getFreeId(Type type) {
 
         boolean itsStudent = Type.STUDENT == type;
@@ -67,6 +78,8 @@ public List<User> getAllUsers(){
         return lastId;
 
     }
+
+
 }
 
 
