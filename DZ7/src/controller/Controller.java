@@ -8,7 +8,7 @@ import view.View;
 
 import java.util.Scanner;
 
-import static java.lang.System.exit;
+
 
 
 public class Controller {
@@ -37,13 +37,13 @@ public class Controller {
     public void run() {
         final Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.print("Ввелите дествительную часть 1 числа: ");
+            System.out.print("Р’РІРµР»РёС‚Рµ РґРµСЃС‚РІРёС‚РµР»СЊРЅСѓСЋ С‡Р°СЃС‚СЊ 1 С‡РёСЃР»Р°: ");
             int r1 = scanner.nextInt();
-            System.out.print("Ввелите мнимую часть 1 числа: ");
+            System.out.print("Р’РІРµР»РёС‚Рµ РјРЅРёРјСѓСЋ С‡Р°СЃС‚СЊ 1 С‡РёСЃР»Р°: ");
             int i1 = scanner.nextInt();
-            System.out.print("Ввелите дествительную часть 2 числа: ");
+            System.out.print("Р’РІРµР»РёС‚Рµ РґРµСЃС‚РІРёС‚РµР»СЊРЅСѓСЋ С‡Р°СЃС‚СЊ 2 С‡РёСЃР»Р°: ");
             int r2 = scanner.nextInt();
-            System.out.print("Ввелите мнимую часть 2 числа: ");
+            System.out.print("Р’РІРµР»РёС‚Рµ РјРЅРёРјСѓСЋ С‡Р°СЃС‚СЊ 2 С‡РёСЃР»Р°: ");
             int i2 = scanner.nextInt();
             ComplexNumber num1 = ComplexNumberFactory.createComplexNumber(r1, i1);
 
@@ -52,7 +52,7 @@ public class Controller {
             addComplexNum(num1, num2);
             MultiplicationComplexNum(num1, num2);
             DivisionComplexNum(num1, num2);
-            System.out.print("Если хотите выти нажмите q или любую клавишу для продолжения");
+            System.out.print("Р•СЃР»Рё С…РѕС‚РёС‚Рµ РІС‹С‚Рё РЅР°Р¶РјРёС‚Рµ q РёР»Рё Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ РґР»СЏ РїСЂРѕРґРѕР»Р¶РµРЅРёСЏ");
 
                 if (scanner.next().charAt(0) == 'q') {
                     scanner.close();

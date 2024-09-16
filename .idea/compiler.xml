@@ -6,7 +6,6 @@
         <sourceOutputDir name="../../DZ7/DZ7/target/generated-sources/annotations" />
         <sourceTestOutputDir name="../../DZ7/DZ7/target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DZ7" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
