@@ -4,7 +4,7 @@ import entity.User;
 
 public interface UserView <T extends User> extends GetDetail<T>, SendOnConsole<T> {
     /**
-     * Применяем прицип ISP
+     * РџСЂРёРјРµРЅСЏРµРј РїСЂРёС†РёРї ISP
      * */
 
 }

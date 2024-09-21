@@ -7,7 +7,7 @@ import java.util.List;
 
 public class TeacherController implements UserController<Teacher> {
     /**
-     * Внедряем зависимость через абстракцию-интерфейс и через конструктор тем самым ослабляя связи следуя принципу DIP
+     * Р’РЅРµРґСЂСЏРµРј Р·Р°РІРёСЃРёРјРѕСЃС‚СЊ С‡РµСЂРµР· Р°Р±СЃС‚СЂР°РєС†РёСЋ-РёРЅС‚РµСЂС„РµР№СЃ Рё С‡РµСЂРµР· РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ С‚РµРј СЃР°РјС‹Рј РѕСЃР»Р°Р±Р»СЏСЏ СЃРІСЏР·Рё СЃР»РµРґСѓСЏ РїСЂРёРЅС†РёРїСѓ DIP
      *
      * */
     private UserService service;
@@ -35,7 +35,7 @@ public class TeacherController implements UserController<Teacher> {
 
 
 /**
- * данный устаревший метод не имплементируем путем использования принципа ISP
+ * РґР°РЅРЅС‹Р№ СѓСЃС‚Р°СЂРµРІС€РёР№ РјРµС‚РѕРґ РЅРµ РёРјРїР»РµРјРµРЅС‚РёСЂСѓРµРј РїСѓС‚РµРј РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїСЂРёРЅС†РёРїР° ISP
  * */
 //    @Override
 //    public void create(String firstName, String lastName, String middleName) {
